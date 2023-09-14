@@ -510,29 +510,33 @@
             </li>
           </ul>
         </div>
-        <div class="footer-form">
+        <div class="footer-form-wrapper">
           <p class="footer-form-text">Subscribe</p>
-          <input
-            class="footer-form-input"
-            type="email"
-            name="email_for_subscribe"
-            placeholder="E-mail"
-          />
-          <button type="submit">
-            <p>Subscribe</p>
-            <svg class="footer-button-icon" width="24" height="24">
-              <use href="./images/icons.svg#icon-telegram"></use>
-            </svg>
-          </button>
+          <form class="footer-form" action="">
+            <label class="footer-form-label"
+              ><input
+                class="footer-form-input"
+                type="email"
+                name="email_for_subscribe"
+                placeholder="E-mail"
+              />
+            </label>
+            <button class="footer-button" type="submit">
+              Subscribe
+              <svg class="footer-button-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-telegram"></use>
+              </svg>
+            </button>
+          </form>
         </div>
       </div>
     </footer>
 
     <!-- Backdrop -->
 
-    <div class="backdrop">
+    <div class="backdrop is-open">
       <div class="modal">
-        <button class="close-button">
+        <button class="close-button" type="button">
           <svg
             class="close-button-icon"
             width="8"
@@ -551,7 +555,7 @@
                 class="form-input"
                 type="text"
                 id="user-name"
-                name="user_name"
+                name="user-name"
                 pattern="[a-zA-Zа-яА-ЯіІїЇєЄґҐ']+"
                 title="Andrii"
                 required
@@ -559,7 +563,7 @@
               <svg
                 class="form-field-icon"
                 width="18"
-                height="18"
+                height="24"
                 aria-label="person icon"
               >
                 <use href="./images/icons.svg#icon-person"></use>
@@ -589,7 +593,7 @@
             </div>
           </div>
           <div class="form-field-wrapper">
-            <label class="form-field-label" for="user-email">E-mail</label>
+            <label class="form-field-label" for="user-email">Email</label>
             <div class="input-icon-wrapper">
               <input
                 class="form-input"
@@ -608,11 +612,11 @@
               </svg>
             </div>
           </div>
-          <div class="form-field-wrapper">
+          <div class="form-field-wrapper form-textarea-wrapper">
             <label class="form-field-label" for="user-comment">Comment</label>
             <textarea
               class="form-field-comment"
-              name="user_comment"
+              name="user-comment"
               id="user-comment"
               placeholder="Text input"
             ></textarea>
@@ -621,7 +625,7 @@
             <input
               class="form-checkbox-input visually-hidden"
               type="checkbox"
-              name="user_privacy"
+              name="user-privacy"
               id="user-privacy"
               value="true"
               required
